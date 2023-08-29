@@ -1,3 +1,4 @@
+import React from "react";
 import RootStyleRegistry from './emotion';
 import { ThemeContextProvider } from "@/context/theme.context";
 import { themeSettings } from "@/lib/themeSettings";
@@ -5,7 +6,6 @@ import { HeaderAction } from "@/components/Header";
 import { menuSettings } from "@/lib/menuSettings";
 import { FooterAction } from "@/components/Footer";
 import { Poppins } from 'next/font/google'
-import React from "react";
 
 export const revalidate = 5;
 

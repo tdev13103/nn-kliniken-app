@@ -4,6 +4,7 @@ import { CacheProvider } from '@emotion/react';
 import { useEmotionCache, MantineProvider } from '@mantine/core';
 import { useServerInsertedHTML } from 'next/navigation';
 import { defaultTheme } from '@/helpers/mantineTheme'
+import { ModalsProvider } from "@mantine/modals";
 
 export default function RootStyleRegistry( { children }: { children: React.ReactNode } ) {
 	const cache = useEmotionCache();
@@ -22,7 +23,9 @@ export default function RootStyleRegistry( { children }: { children: React.React
 		<CacheProvider value={ cache }>
 			{/* @ts-ignore */ }
 			<MantineProvider withGlobalStyles withNormalizeCSS theme={ defaultTheme }>
-				{ children }
+				<ModalsProvider>
+					{ children }
+				</ModalsProvider>
 			</MantineProvider>
 		</CacheProvider>
 	);

@@ -70,6 +70,7 @@ const useStyles = createStyles( ( theme ) => ({
 				backgroundColor : 'transparent',
 				
 				'&:hover' : {
+					color           : theme.colors.blue8,
 					backgroundColor : theme.colors.grey,
 				},
 			},

@@ -75,6 +75,9 @@ const useStyles = createStyles( ( theme ) => ({
 	},
 	
 	card : {
+		display         : 'flex',
+		flexDirection   : 'column',
+		alignItems      : 'flex-start',
 		backgroundColor : theme.colors.white,
 		color           : theme.colors.blue8,
 		marginBottom    : `calc(${ theme.spacing.md } * 2)`,
